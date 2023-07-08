@@ -1,0 +1,114 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f1fbff;
+}
+.go-up {
+  border-radius: 5px;
+  background: #ffc107;
+  color: black;
+  position: fixed;
+  z-index: 100;
+  bottom: 30px;
+  right: -60px;
+  padding: 3px 10px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: .4s;
+}
+@media (max-width: 1200px) {
+  .go-up {
+    font-size: 20px;
+    padding: 3px 5px;
+    right: 10px;
+  }
+}
+/* start navbar */
+.navbar .nav-link {
+  color: black;
+  font-size: 18px;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #ffc107;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+  border-color: #ffc107;
+}
+/* start landing page */
+.landing-page {
+  position: relative;
+}
+.landing-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 2;
+}
+.carousel-item {
+  height: 100vh;
+}
+.details {
+  position: absolute;
+  color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.details h2 {
+  white-space: nowrap;
+  font: 25px;
+}
+.carousel-control-prev,
+.carousel-control-next,
+.details {
+  z-index: 3;
+}
+/* about */
+.about .about-img {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+.about .about-img img {
+  border-radius: 20px;
+  border: 5px solid #ffc107;
+}
+/* services */
+.services {
+  background-color: #eee;
+}
+.services .card .card-body i {
+  font-size: 60px;
+}
+/* team */
+.team {
+  background-color: #eee;
+}
+.team .socials i {
+  transition: .3s;
+}
+.team .socials i:hover {
+  transform: scale(1.2);
+}
+.team .socials i:first-child {
+  color: #1da1f2 !important;
+}
+.team .socials i:nth-child(2) {
+  color: #0a66c2 !important;
+}
+.team .socials i:nth-child(3) {
+  color: #1877f2 !important;
+}
+.team .socials i:last-child {
+  color: #f56040 !important;
+}
+/* contact us */
+.contact textarea {
+  resize: none;
+}
