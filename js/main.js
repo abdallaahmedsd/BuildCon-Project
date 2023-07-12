@@ -14,17 +14,12 @@ document.body.addEventListener('click', () => {
   document.querySelector('.navbar-collapse').classList.remove("show");
 });
 
-document.querySelector('.navbar-brand').onclick = function () {
-  links.forEach(link => {
-    link.classList.remove('active');
-    if (link.classList.contains('home')) {
-      link.classList.add('active');
-    }
-  });
-}
+document.querySelector('.navbar-brand').onclick = activeHome;
 
 const goUp = document.querySelector('.go-up');
-
+goUp.addEventListener('click', () => {
+  activeHome();
+});
 window.onscroll = function () {
   if (this.scrollY >= 1000) {
     goUp.style.right = '20px';
@@ -37,5 +32,15 @@ goUp.onclick = function () {
   window.scrollTo({
     top: 0,
     behavior: 'smooth',
+  });
+}
+
+
+function activeHome() {
+  links.forEach(link => {
+    link.classList.remove('active');
+    if (link.classList.contains('home')) {
+      link.classList.add('active');
+    }
   });
 }
